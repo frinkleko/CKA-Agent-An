@@ -1,83 +1,5 @@
 # CKA-Agent: Bypassing LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search
 
-<a href="https://arxiv.org/abs/2512.01353" target="_blank">
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-CKA_Agent-red?logo=arxiv&style=for-the-badge" />
-</a>
-<a href="https://cka-agent.github.io/" target="_blank">
-    <img alt="Website" src="https://img.shields.io/badge/🌎_Homepage-blue.svg?style=for-the-badge" />
-</a>
-<a href="https://github.com/Graph-COM/CKA-Agent" target="_blank">
-    <img alt="GitHub code" src="https://img.shields.io/badge/💻_Code_GitHub-black.svg?style=for-the-badge" />
-</a>
-<a href="#cite" target="_blank">
-    <img alt="Cite" src="https://img.shields.io/badge/📖_Cite!-lightgrey?style=for-the-badge" />
-</a>
-<a href="https://www.python.org/" target="_blank">
-    <img alt="Python" src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge" />
-</a>
-
-
-## 🔥 Latest Results on Frontier Models (Dec 2025)
-
-CKA-Agent demonstrates consistent high attack success rates against the latest frontier models, including **GPT-5.2**, **Gemini-3.0-Pro**, and **Claude-Haiku-4.5**. The results are summarized below:
-
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Model</th>
-      <th colspan="4" align="center">HarmBench</th>
-      <th colspan="4" align="center">StrongREJECT</th>
-    </tr>
-    <tr>
-      <th>FS ↑</th>
-      <th>PS ↑</th>
-      <th>V ↓</th>
-      <th>R ↓</th>
-      <th>FS ↑</th>
-      <th>PS ↑</th>
-      <th>V ↓</th>
-      <th>R ↓</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>🟢 GPT-5.2</b></td>
-      <td><b>0.889</b></td>
-      <td>0.079</td>
-      <td>0.024</td>
-      <td>0.008</td>
-      <td><b>0.932</b></td>
-      <td>0.056</td>
-      <td>0.006</td>
-      <td>0.006</td>
-    </tr>
-    <tr>
-      <td><b>🟣 Gemini-3.0-Pro</b></td>
-      <td><b>0.881</b></td>
-      <td>0.087</td>
-      <td>0.000</td>
-      <td>0.032</td>
-      <td><b>0.951</b></td>
-      <td>0.037</td>
-      <td>0.006</td>
-      <td>0.006</td>
-    </tr>
-    <tr>
-      <td><b>🟠 Claude-Haiku-4.5</b></td>
-      <td><b>0.960</b></td>
-      <td>0.024</td>
-      <td>0.008</td>
-      <td>0.008</td>
-      <td><b>0.969</b></td>
-      <td>0.025</td>
-      <td>0.006</td>
-      <td>0.000</td>
-    </tr>
-  </tbody>
-</table>
-
-> **Metrics:** FS = Full Success, PS = Partial Success, V = Vacuous, R = Refusal. Results collected in December 2025.
-
 ## Overview
 This repository contains the official implementation of **CKA-Agent**, a novel approach to bypassing the guardrails of commercial large language models (LLMs) through **harmless prompt weaving** and **adaptive tree search** techniques. 
 
@@ -128,20 +50,4 @@ You can modify the `run_experiment.sh` script or directly pass arguments to `mai
 **Example (running only the jailbreak phase):**
 ```bash
 python main.py --phase jailbreak
-```
-
-
-## Cite
-If you find this repository useful for your research, please consider citing the following paper:
-
-```bibtex
-@misc{wei2025trojan,
-      title={The Trojan Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search}, 
-      author={Rongzhe Wei and Peizhi Niu and Xinjie Shen and Tony Tu and Yifan Li and Ruihan Wu and Eli Chien and Pin-Yu Chen and Olgica Milenkovic and Pan Li},
-      year={2025},
-      eprint={2512.01353},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2512.01353}, 
-}
 ```
