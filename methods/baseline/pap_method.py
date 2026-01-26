@@ -293,7 +293,6 @@ class PAPMethod(AbstractJailbreakMethod):
         """
         # Try to load from the persuasive_jailbreaker directory
         taxonomy_paths = [
-            "/home/jovyan/persuasive_jailbreaker/persuasion_taxonomy.jsonl",
             "data/persuasion_taxonomy.jsonl",
             "persuasion_taxonomy.jsonl",
         ]
