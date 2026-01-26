@@ -10,30 +10,6 @@ set -euo pipefail
 
 echo "=== Starting Black-box Model Experiment ==="
 
-# # 1) Locate conda executable (prefer PATH; fallback to common install paths).
-# if command -v conda >/dev/null 2>&1; then
-#   CONDA_EXE="$(command -v conda)"
-# elif [ -x "$HOME/miniconda3/bin/conda" ]; then
-#   CONDA_EXE="$HOME/miniconda3/bin/conda"
-# elif [ -x "/home/jovyan/miniconda3/bin/conda" ]; then
-#   CONDA_EXE="/home/jovyan/miniconda3/bin/conda"
-# else
-#   echo "Error: 'conda' not found. Install Miniconda or add it to PATH."
-#   exit 1
-# fi
-
-# # 2) Initialize conda for this bash process (no profile files needed).
-# eval "$("$CONDA_EXE" shell.bash hook)"
-
-# # 3) Activate your environment.
-# echo "Activating conda environment..."
-# conda activate correlated-knowledge-jailbreak || {
-#   echo "Error: Failed to activate 'correlated-knowledge-jailbreak'"
-#   exit 1
-# }
-# echo "Conda environment activated: $(python -V)"
-
-# 4) === YOUR ORIGINAL ENV VAR BLOCK (restored, unchanged) ===
 echo "Setting GPU environment variables..."
 # Whitebox model uses GPU 0, Judge model uses GPU 1
 # Total: 2 GPUs needed, using 0,1
@@ -41,7 +17,6 @@ export CUDA_LAUNCH_BLOCKING=1
 export CUDA_CACHE_PATH=/tmp/cuda_cache
 export CUDA_VISIBLE_DEVICES=0,1
 export TOKENIZERS_PARALLELISM=false 
-export NLTK_DATA=/home/rongzhe/nltk_data
 echo "CUDA_VISIBLE_DEVICES set to: $CUDA_VISIBLE_DEVICES"
 # === end of your original block ===
 
