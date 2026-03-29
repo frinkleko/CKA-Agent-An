@@ -1,6 +1,6 @@
 **Table R1.** Comparison with prior tree-search jailbreak methods on StrongREJECT (target: GPT-oss-120B, judge: Gemini-2.5-Flash).
 
-| Method     | Full Success↑   | Partial Success↑   | Vacuous↓    | Refusal↓    |
+| Method     | Full Success (FS)↑   | Partial Success (PS)↑   | Vacuous (V)↓    | Refusal (R)↓    |
 |------------|-------|-------|-------|-------|
 | TAP        | 0.095 | 0.032 | 0.016 | 0.857 |
 | DAMON      | 0.654 | 0.111 | 0.068 | 0.167 |
