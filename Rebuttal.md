@@ -3,7 +3,7 @@
 | Method     | Full Success (FS)↑   | Partial Success (PS)↑   | Vacuous (V)↓    | Refusal (R)↓    |
 |------------|-------|-------|-------|-------|
 | TAP        | 0.095 | 0.032 | 0.016 | 0.857 |
-| DAMON      | 0.654 | 0.111 | 0.068 | 0.167 |
+| DAMON + Same Synthesizer      | 0.654 | 0.111 | 0.068 | 0.167 |
 | CKA-Agent  | 0.982 | 0.012 | 0.006 | 0.000 |
 
 
